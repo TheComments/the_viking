@@ -7,7 +7,7 @@ class Hash
       end
     end
   end
-  
+
   unless method_defined?(:dasherize_keys)
     def dasherize_keys
       inject({}) do |options, (key, value)|

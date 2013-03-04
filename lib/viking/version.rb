@@ -1,9 +1,3 @@
-module Viking #:nodoc:
-  module VERSION #:nodoc:
-    MAJOR = 0
-    MINOR = 0
-    TINY  = 3
-
-    STRING = [MAJOR, MINOR, TINY].join('.')
-  end
+module Viking
+  VERSION = "1.0.0"
 end
