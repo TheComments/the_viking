@@ -1,4 +1,5 @@
-# Viking
+Viking [![Build Status](https://travis-ci.org/dimelo/viking.png?branch=master)](https://travis-ci.org/dimelo/viking) [![Dependency Status](https://gemnasium.com/dimelo/viking.png)](https://gemnasium.com/dimelo/viking)
+====
 
 This is a fork of [Vikinggem](https://rubygems.org/gems/vikinggem). Bug fix and
 new feature for this gem should be place here.
