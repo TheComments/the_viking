@@ -11,7 +11,7 @@ require "viking/version"
 # framework initialization. Rails initializers, for instance, work great for
 # this. An example of such an initializer would be as follows:
 #
-#   Viking.default_engie = 'defensio'
+#   Viking.default_engine = 'defensio'
 #   Viking.connect_options = { :api_key => '1234abc' }
 #
 # From this point out, Viking should have everything it needs to access the
@@ -41,8 +41,9 @@ module Viking
     end
 
     def connect(engine, options)
-      unless engine.nil? || engine.to_s.empty?
-        Viking.const_get(engine.to_s.capitalize).new(options)
+      engine = engine.to_s
+      if !engine.empty?
+        Viking.const_get(engine.capitalize).new(options)
       end
     end
 

@@ -17,6 +17,10 @@ describe Viking do
       Viking.connect('akismet', {}).should be_a_kind_of(Viking::Akismet)
     end
 
+    it "should load the Akismet engine with Symbol" do
+      Viking.connect(:akismet, {}).should be_a_kind_of(Viking::Akismet)
+    end
+
     it "should be nil if the engine is nil" do
       Viking.connect(nil, {}).should be_nil
     end
