@@ -1,6 +1,7 @@
 ### TheViking 1.0
 
 [Akismet](https://akismet.com/) anti-spam service for Ruby and Rails
+
 ====
 
 1. TheViking - **is repack** of [Viking gem](https://github.com/dimelo/viking) without support of Defensio anti-spam service
