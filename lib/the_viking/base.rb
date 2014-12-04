@@ -1,4 +1,4 @@
-module Viking
+module TheViking
   class Base
 
     attr_accessor :options
@@ -42,11 +42,11 @@ module Viking
     end
 
     def logger
-      Viking.logger
+      TheViking.logger
     end
 
     def self.logger
-      Viking.logger
+      TheViking.logger
     end
 
     # Checks to ensure that the minimum number of +options+ have been provided

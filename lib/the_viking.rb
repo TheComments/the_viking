@@ -1,29 +1,28 @@
 require "core_ext/object"
 require "core_ext/transformations"
-require "viking/version"
+require "the_viking/version"
 
 # = Description
 # Provides a simple interface to polymorphically access to the spam protection
 # service of your choice.
 #
 # = Usage
-# I find it useful to first initialize Viking in a separate file during
+# I find it useful to first initialize TheViking in a separate file during
 # framework initialization. Rails initializers, for instance, work great for
 # this. An example of such an initializer would be as follows:
 #
-#   Viking.default_engine = 'defensio'
-#   Viking.connect_options = { :api_key => '1234abc' }
+#   TheViking.default_engine = 'akismet'
+#   TheViking.connect_options = { :api_key => '1234abc' }
 #
-# From this point out, Viking should have everything it needs to access the
+# From this point out, TheViking should have everything it needs to access the
 # service of your choice. Merely call methods on your service of choice as
 # documented. For instance:
 #
-#   Viking.mark_as_spam(:signaturs => "1234abc")
-module Viking
+#   TheViking.mark_as_spam(:signaturs => "1234abc")
+module TheViking
   class Error < StandardError; end
 
-  autoload :Akismet, 'viking/akismet'
-  autoload :Defensio, 'viking/defensio'
+  autoload :Akismet, 'the_viking/akismet'
 
   class << self
 
@@ -43,7 +42,7 @@ module Viking
     def connect(engine, options)
       engine = engine.to_s
       if !engine.empty?
-        Viking.const_get(engine.capitalize).new(options)
+        TheViking.const_get(engine.capitalize).new(options)
       end
     end
 
@@ -78,4 +77,4 @@ module Viking
   end
 end
 
-require "viking/base"
+require "the_viking/base"

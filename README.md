@@ -1,34 +1,60 @@
-Viking [![Build Status](https://travis-ci.org/dimelo/viking.png?branch=master)](https://travis-ci.org/dimelo/viking) [![Dependency Status](https://gemnasium.com/dimelo/viking.png)](https://gemnasium.com/dimelo/viking)
+### TheViking 1.0
+
+Akismet anti-spam service for Ruby and Rails
+
 ====
 
-This is a fork of [Vikinggem](https://rubygems.org/gems/vikinggem). Bug fix and
-new feature for this gem should be place here.
+1. TheViking - **is repack** of Viking gem without support of Defensio anti-spam service
+2. [Viking gem](https://github.com/dimelo/viking) is a fork of [Vikinggem](https://rubygems.org/gems/vikinggem). Bug fix and new feature for this gem should be place here.
 
-Viking brings you easy access to the [Akismet](http://akismet.com/), and [Defensio](http://www.defensio.com/) spam protection services, but without the need for you to use Rails. VikingGem is Ruby web framework agnostic.
-
-## Installation
+### Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'viking'
+```ruby
+  gem 'the_viking'
+```
 
 And then execute:
 
-    $ bundle
+```sh
+  bundle
+```
 
 Or install it yourself as:
 
-    $ gem install viking
+```sh
+gem install the_viking
+```
 
-## Usage
+### Usage
 
-    Viking.connect('akismet', api_key: '1234', blog: 'http://foo.com')
+```ruby
+  @vik = TheViking::Akismet.new(api_key: '1234', blog: 'http://foo.com')
+```
 
-Spam or ham ?
+### Spam or ham ?
 
-    Viking::Akismet.check_comment(options)
+```ruby
+  @vik.check_comment(
+    user_ip: '111.222.333.444',
+    user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:33.0) Gecko/20100101 Firefox/33.0',
+    comment_author: 'Spammer Bot',
+    comment_author_email: 'spam@spam-server.com',
+    comment_content: 'Hello! <a href='http://viagra-for-u.xxx'>I am spammer! Click it!</a>'
+  )
+
+  # additional options
+  #
+  # referrer
+  # comment_author_url
+  # permalink - url of commented page
+  # comment_type - may be blank, comment, trackback, pingback, or a made up value like
+```
 
 ## History
+
+### TheViking 1.0.0 / 4 dec 2015, repack by github.com/the-teacher
 
 ### 1.0.0 2013-03-04
 

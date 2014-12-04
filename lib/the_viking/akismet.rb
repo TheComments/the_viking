@@ -9,7 +9,7 @@ require 'set'
 # License::   BSD
 #
 # Rewritten to be more agnostic
-module Viking
+module TheViking
   class Akismet < Base
 
     class << self
@@ -27,7 +27,7 @@ module Viking
     self.valid_responses  = Set.new(['false', ''])
     self.normal_responses = valid_responses.dup << 'true'
     self.standard_headers = {
-      'User-Agent'   => "Viking (Ruby Gem) v#{Viking::VERSION}",
+      'User-Agent'   => "TheViking (Ruby Gem) v#{TheViking::VERSION}",
       'Content-Type' => 'application/x-www-form-urlencoded'
     }
 
