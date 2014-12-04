@@ -4,7 +4,7 @@ Akismet anti-spam service for Ruby and Rails
 
 ====
 
-1. TheViking - **is repack** of Viking gem without support of Defensio anti-spam service
+1. TheViking - **is repack** of [Viking gem](https://github.com/dimelo/viking) without support of Defensio anti-spam service
 2. [Viking gem](https://github.com/dimelo/viking) is a fork of [Vikinggem](https://rubygems.org/gems/vikinggem). Bug fix and new feature for this gem should be place here.
 
 ### Installation
@@ -54,7 +54,9 @@ gem install the_viking
 
 ## History
 
-### TheViking 1.0.0 / 4 dec 2015, repack by github.com/the-teacher
+### TheViking 1.0.0
+
+4 dec 2015, repack by github.com/the-teacher
 
 ### 1.0.0 2013-03-04
 
