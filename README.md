@@ -44,13 +44,15 @@ gem install the_viking
     comment_content: 'Hello! <a href='http://viagra-for-u.xxx'>I am spammer! Click it!</a>'
   )
 
-  # additional options
-  #
-  # referrer
-  # comment_author_url
-  # permalink - url of commented page
-  # comment_type - may be blank, comment, trackback, pingback, or a made up value like
+  # => true / false
 ```
+
+#### Additional options
+
+1. referrer
+2. comment_author_url
+3. permalink - url of commented page
+4. comment_type - may be blank, comment, trackback, pingback, or a made up value like
 
 ## History
 
