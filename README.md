@@ -58,7 +58,7 @@ gem install the_viking
 
 ### TheViking 1.0.0
 
-4 dec 2015, repack by github.com/the-teacher
+4 dec 2014, repack by github.com/the-teacher
 
 ### 1.0.0 2013-03-04
 
