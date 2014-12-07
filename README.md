@@ -44,7 +44,7 @@ gem install the_viking
     comment_content: 'Hello! <a href='http://viagra-for-u.xxx'>I am spammer! Click it!</a>'
   )
 
-  # => true / false
+  # => {:spam=>true, :message=>"true"} | {:spam=>false, :message=>"false"}
 ```
 
 #### Additional options
