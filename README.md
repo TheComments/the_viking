@@ -41,7 +41,7 @@ gem install the_viking
     user_agent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:33.0) Gecko/20100101 Firefox/33.0',
     comment_author: 'Spammer Bot',
     comment_author_email: 'spam@spam-server.com',
-    comment_content: 'Hello! <a href='http://viagra-for-u.xxx'>I am spammer! Click it!</a>'
+    comment_content: 'Hello! <a href="http://viagra-for-u.xxx">I am spammer! Click it!</a>'
   )
 
   # => {:spam=>true, :message=>"true"} | {:spam=>false, :message=>"false"}
